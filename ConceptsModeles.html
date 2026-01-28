@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts & Modeles</title>
+    <link href="CSS/StyleGenerale.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="Images/CY_Cergy_Paris_Universite_-_Logo.png" alt="Logo CY" class="logo">
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="SecuriteNavigateur.html">Sécurité du navigateur</a>
+            <a href="Deploiement.html">Déploiement</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Concepts et modèles en sécurité web</h1>
+        <section>
+            <h2>Notions fondamentales de sécurité</h2>
+            <ul>
+                <li>Confidentialité</li>
+                    La confidentialité signifie que seules les personnes autorisées peuvent accéder aux informations.
+                    Par exemple, un utilisateur ne doit pouvoir consulter que ses propres messages, ses propres données personnelles ou son propre compte.
+                <ul>
+                    Sans confidentialité :
+                    <li>Les données peuvent être espionnées</li>
+                    <li>Les informations privées peuvent fuiter</li>
+                    <li>La vie privée est compromise</li>
+                </ul>
+                <ul>
+                    Dans le contexte du Web, la confidentialité est assurée notamment par :
+                    <li>Le chiffrement des communications</li>
+                    <li>Les systèmes d’authentification</li>
+                    <li>Les droits d’accès</li>
+                </ul>
+                <li>Intégrité</li>
+                    L’intégrité garantit que les données ne sont pas modifiées de manière non autorisée.
+                    Une information doit rester identique entre le moment où elle est enregistrée et le moment où elle est lue.
+                    <ul>
+                        Sans intégrité :
+                        <li>Des montants de paiement pourraient être modifiés</li>
+                        <li>Des messages pourraient être falsifiés</li>
+                        <li>Des résultats pourraient être corrompus</li>
+                    </ul>
+                    Sur un site web, il est essentiel de vérifier que les données reçues n’ont pas été altérées et que seules les actions autorisées sont possibles.
+                <li>Disponibilité</li>
+                    La disponibilité signifie que les services restent accessibles lorsque les utilisateurs en ont besoin.
+                    <ul>
+                        Sans disponibilité :
+                        <li>Un site peut devenir inaccessible</li>
+                        <li>Les utilisateurs ne peuvent plus travailler</li>
+                        <li>Une entreprise peut perdre de l’argent</li>
+                    </ul>
+                    Certaines attaques ne cherchent pas à voler des données mais à rendre un site inutilisable. Il est donc important de protéger également les performances et la stabilité du système.
+            </ul>
+        </section>
+        <section>
+            <h2>Acteurs d’un système web</h2>
+            <ul>
+                <li>L’utilisateur classique</li>
+                    Il utilise le site pour ses besoins personnels : consulter des pages, remplir des formulaires, gérer son compte, effectuer des actions.
+                <li>L’administrateur</li>
+                    Il gère le site : création de comptes, modération, configuration, maintenance.
+                <li>Le serveur</li>
+                    Il héberge l’application, traite les requêtes et stocke les données.
+                <li>L’attaquant</li>
+                    Il tente d’exploiter des failles pour obtenir un avantage : vol de données, accès interdit, perturbation du service.
+            </ul>
+        </section>
+        <section>
+            <h2>Menaces courantes sur le Web</h2>
+            <ul>
+                <li>Vol de mot de passe</li>
+                <li>Usurpation d’identité</li>
+                <li>Accès à des données d’autres utilisateurs</li>
+                <li>Modification non autorisée de contenu</li>
+                <li>Injection de code</li>
+                <li>Blocage du service</li>
+            </ul>
+            <p>
+                Ces menaces existent car les applications web acceptent des entrées venant de l’extérieur. Toute donnée fournie par un utilisateur peut potentiellement être malveillante.
+            </p>
+        </section>
+        <section>
+            <h2>Principes généraux de conception sécurisée d’une application web</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Définition simple</th>
+                        <th>Objectif principal</th>
+                        <th>Exemple concret</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Surface d’attaque</td>
+                        <td>Ensemble des points par lesquels un utilisateur ou un attaquant peut interagir avec l’application</td>
+                        <td>Identifier ce qui doit être protégé</td>
+                        <td>Formulaire de connexion, paramètres d’URL, API, upload de fichiers</td>
+                    </tr>
+                    <tr>
+                        <td>Principe de confiance minimale</td>
+                        <td>Ne jamais supposer qu’une donnée reçue est fiable</td>
+                        <td>Empêcher la manipulation de requêtes</td>
+                        <td>Vérifier côté serveur même si un champ est désactivé</td>
+                    </tr>
+                    <tr>
+                        <td>Séparation des responsabilités</td>
+                        <td>Division de l’application en plusieurs couches</td>
+                        <td>Éviter qu’une partie gère tout</td>
+                        <td>Frontend affiche, backend décide, base stocker</td>
+                    </tr>
+                    <tr>
+                        <td>Authentification</td>
+                        <td>Vérifier l’identité d’un utilisateur</td>
+                        <td>Savoir qui accède au site</td>
+                        <td>Login avec mot de passe</td>
+                    </tr>
+                    <tr>
+                        <td>Autorisation</td>
+                        <td>Vérifier les droits d’un utilisateur</td>
+                        <td>Savoir ce qu’il peut faire</td>
+                        <td>Seul admin peut supprimer</td>
+                    </tr>
+                    <tr>
+                        <td>Modèle sécurisé simple</td>
+                        <td>Chaîne de vérifications côté serveur</td>
+                        <td>Contrôler chaque action</td>
+                        <td>Vérifier identité -> droits -> données</td>
+                    </tr>
+                    <tr>
+                        <td>Défense en profondeur</td>
+                        <td>Superposition de protections</td>
+                        <td>Réduire les risques si une faille existe</td>
+                        <td>Login + permissions + validation</td>
+                    </tr>
+                    <tr>
+                        <td>Sécurité dès la conception</td>
+                        <td>Intégrer la sécurité dès le début</td>
+                        <td>Éviter gros problèmes plus tard</td>
+                        <td>Prévoir rôles dès le design</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>2025 - 2026</p>
+            <p>Université de Cergy-Ponstoise</p>
+        </div>
+    </footer>
+</body>
+</html>

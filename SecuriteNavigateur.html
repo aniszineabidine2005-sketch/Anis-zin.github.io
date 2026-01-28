@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sécurité du navigateur</title>
+    <link href="CSS/StyleGenerale.css" rel="stylesheet">
+    <link href="CSS/StyleSecuriteNav.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="Images/CY_Cergy_Paris_Universite_-_Logo.png" alt="Logo CY" class="logo">
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="ConceptsModeles.html">Concepts & Modeles</a>
+            <a href="Deploiement.html">Déploiement</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Sécurité du navigateur</h1>
+        <section>
+            <h2>Rôle du navigateur</h2>
+            <p>
+                Le navigateur web constitue le principal point de contact entre l’utilisateur et les sites internet. C’est par lui que passent toutes les interactions : affichage des pages, saisie des données, exécution des scripts et communication avec les serveurs. De ce fait, le navigateur joue un rôle central dans la sécurité globale du Web.
+                Lorsqu’un utilisateur accède à un site, le navigateur reçoit des données provenant du serveur et doit les interpréter correctement. Il transforme le code reçu en une page visible, tout en appliquant un ensemble de règles de sécurité destinées à limiter les comportements dangereux. Ces règles permettent d’empêcher qu’un site malveillant prenne le contrôle du système de l’utilisateur ou accède à des informations qui ne lui appartiennent pas.
+                Le navigateur agit également comme un intermédiaire de confiance. Il gère les connexions sécurisées, affiche des avertissements lorsque quelque chose semble suspect et bloque certains contenus jugés dangereux. Par exemple, lorsqu’un site ne dispose pas d’un certificat valide, le navigateur peut afficher un message d’alerte pour informer l’utilisateur d’un risque potentiel.
+                Un autre rôle important du navigateur est l’isolation des sites. Chaque site web s’exécute dans un environnement séparé. Cela signifie qu’un site ne peut pas, en principe, accéder aux données d’un autre site ouvert dans un autre onglet. Cette séparation limite fortement les possibilités d’attaque entre sites.
+                Enfin, le navigateur offre à l’utilisateur un certain contrôle sur sa propre sécurité. Il permet par exemple de gérer les cookies, l’historique, les autorisations (caméra, micro, localisation) et les extensions installées. Une mauvaise configuration ou l’installation d’extensions non fiables peut cependant affaiblir la sécurité.
+                Ainsi, le navigateur n’est pas seulement un outil d’affichage, mais un véritable acteur de la protection des utilisateurs sur le Web.
+            </p>
+        </section>
+        <section>
+            <h2>Menaces côté navigateur</h2>
+            <div class="contenue-illustre">
+                <p>
+                    Même avec des protections intégrées, le navigateur reste exposé à différentes menaces. Ces menaces visent principalement à tromper l’utilisateur ou à exploiter des failles dans les pages web.
+                    Parmi les risques les plus courants, on trouve les sites malveillants. Certains sites sont conçus pour imiter des sites légitimes afin de récupérer des identifiants ou des informations personnelles. L’utilisateur peut croire qu’il se trouve sur un site officiel alors qu’il s’agit en réalité d’une copie.
+                    Un autre risque important concerne l’exécution de scripts malveillants. Une page web peut contenir du code destiné à voler des données, rediriger l’utilisateur vers un autre site ou afficher de faux messages. Ces scripts peuvent parfois être injectés dans des sites pourtant légitimes.
+                    Les cookies constituent également une cible. Ils peuvent contenir des informations permettant de maintenir une session ouverte. Si un attaquant parvient à récupérer un cookie, il peut parfois se faire passer pour l’utilisateur sans connaître son mot de passe.
+                    Les extensions de navigateur représentent un autre vecteur de risque. Certaines extensions demandent de nombreuses autorisations et peuvent accéder à l’ensemble des pages consultées. Une extension malveillante peut ainsi espionner la navigation ou injecter du contenu.
+                    Enfin, l’ingénierie sociale joue un rôle majeur. Plutôt que d’attaquer directement la technologie, les attaquants cherchent souvent à manipuler l’utilisateur, par exemple en lui demandant d’installer un logiciel, de cliquer sur un lien ou de fournir des informations.
+                </p>
+                <figure>
+                    <img src="Images/logicielEspion.png" alt="schéma montrant utilisateur -> navigateur -> site légitime / site malveillant" class="img-espion">
+                    <figcaption>
+                        schéma montrant utilisateur -> navigateur -> site légitime / site malveillant
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>Mécanismes de protection</h2>
+            <p>
+                Les navigateurs modernes intègrent de nombreux mécanismes pour limiter ces risques.
+                Tout d’abord, ils mettent en place des politiques de sécurité strictes concernant l’exécution du code. Un script provenant d’un site ne peut pas accéder librement aux données d’un autre site. Cette règle réduit fortement les attaques entre domaines.
+                Les navigateurs vérifient également les certificats de sécurité des sites utilisant HTTPS. Si un problème est détecté, un avertissement est affiché afin de prévenir l’utilisateur.
+                Des systèmes de listes noires sont aussi utilisés. Les navigateurs comparent les sites visités à des bases de données de sites dangereux connus. Lorsqu’un site est identifié comme malveillant, l’accès peut être bloqué ou fortement signalé.
+                De plus, de nombreux navigateurs intègrent des protections contre le phishing, les téléchargements dangereux et les fenêtres intempestives. Certains bloquent automatiquement les publicités intrusives et les scripts suspects.
+                Enfin, les mises à jour régulières du navigateur sont essentielles. Elles corrigent des failles découvertes et améliorent continuellement les mécanismes de protection. Utiliser un navigateur à jour constitue l’une des mesures les plus simples et les plus efficaces pour améliorer sa sécurité.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>2025 - 2026</p>
+            <p>Université de Cergy-Ponstoise</p>
+        </div>
+    </footer>
+</body>
+</html>

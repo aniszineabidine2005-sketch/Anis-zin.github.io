@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Securité Web</title>
+    <link href="CSS/StyleGenerale.css" rel="stylesheet">
+    <link href="CSS/StyleIndex.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="Images/CY_Cergy_Paris_Universite_-_Logo.png" alt="Logo CY" class="logo">
+        <nav>
+            <a href="ConceptsModeles.html">Concepts & Modeles</a>
+            <a href="SecuriteNavigateur.html">Sécurité du navigateur</a>
+            <a href="Deploiement.html">Déploiement</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Securité des applications web</h1>
+        <div class="W5">
+            <p>Lanouni Rayan - Zine Abidine Anis</p>
+            <p>L2-Informatique</p>
+            <p>UE Developpement Web</p>
+        </div>
+            <section>
+                <h2>Qu'est-ce qu'internet ?</h2>
+                <div class="contenue-illustre">
+                <div>
+                    <p>
+                        Le World Wide Web, souvent abrégé en « Web », est un système mondial permettant l’accès à des ressources numériques à travers Internet. Ces ressources peuvent prendre de nombreuses formes : pages web, images, vidéos, fichiers audio, documents, applications interactives ou services en ligne. Le Web constitue aujourd’hui l’un des principaux moyens d’accès à l’information dans le monde.
+                        Concrètement, le Web repose sur un ensemble de standards et de protocoles qui permettent aux ordinateurs de communiquer entre eux. Lorsqu’un utilisateur saisit l’adresse d’un site dans son navigateur, celui-ci envoie une requête à un serveur distant. Ce serveur traite la demande et renvoie les données nécessaires pour afficher la page demandée. Ce mécanisme se produit en quelques fractions de seconde, donnant l’impression d’un accès instantané.
+                        Le Web est souvent confondu avec Internet, mais il est important de comprendre la différence. Internet désigne l’infrastructure réseau mondiale, c’est-à-dire l’ensemble des câbles, routeurs, serveurs et connexions permettant aux machines de communiquer. Le Web, quant à lui, est un service qui fonctionne au-dessus d’Internet. De la même manière que le courrier électronique ou la messagerie instantanée utilisent Internet, le Web exploite cette infrastructure pour offrir un système de consultation de contenus hypertextes.
+                        Un élément fondamental du Web est l’hyperlien. Les pages web sont reliées entre elles par des liens, permettant à l’utilisateur de naviguer d’un contenu à un autre sans contrainte. Ce principe de navigation non linéaire constitue l’un des piliers du Web moderne et explique sa richesse et sa souplesse.
+                        Le Web est également basé sur le langage HTML, qui permet de structurer le contenu d’une page. Ce langage indique au navigateur comment organiser les titres, les paragraphes, les images, les tableaux ou encore les formulaires. À cela s’ajoutent les feuilles de style (CSS) pour la mise en forme et les scripts (JavaScript) pour l’interactivité. Ensemble, ces technologies permettent de créer des pages à la fois lisibles, esthétiques et dynamiques.
+                        Avec le temps, le Web a évolué. À ses débuts, il s’agissait principalement de pages statiques affichant du texte et quelques images. Aujourd’hui, le Web permet d’exécuter de véritables applications comparables à des logiciels installés sur un ordinateur. On parle alors d’applications web, capables de gérer des comptes utilisateurs, de stocker des données, de proposer des interfaces interactives et de communiquer en temps réel avec des serveurs.
+                        Le Web peut donc être vu comme une gigantesque plateforme universelle permettant le partage d’informations, l’accès à des services et l’exécution d’applications accessibles depuis n’importe quel appareil connecté.
+                    </p>
+                </div>
+                <div class="case-illustration">
+                    <figure>
+                        <img src="Images/internet-net.jpg" alt="Image d'illustration d'internet" class="internetSchema">
+                        <figcaption>
+                            <em>
+                                Schéma représentant le fonctionnement d'internet
+                            </em>
+                        </figcaption>
+                    </figure>
+                </div>
+                </div>
+            </section>
+            <section>
+                <h2>Pourquoi avoir inventé internet ?</h2>
+                <p>
+                    Le Web a été inventé à la fin des années 1980 par Tim Berners-Lee, alors chercheur au CERN. À cette époque, les scientifiques utilisaient de nombreux systèmes informatiques différents, souvent incompatibles entre eux. Le partage de documents et d’informations était complexe, lent et peu pratique.
+                    L’objectif initial du Web était donc simple : permettre aux chercheurs de partager facilement leurs travaux et leurs documents, indépendamment du type d’ordinateur ou de système d’exploitation utilisé. L’idée consistait à créer un système universel dans lequel les documents seraient accessibles via des liens et consultables depuis n’importe quelle machine connectée.
+                    Très rapidement, le potentiel du Web a dépassé le cadre scientifique. Des universités, puis des entreprises et enfin le grand public ont commencé à adopter cette technologie. Le Web est devenu un moyen de diffusion d’information sans précédent, permettant à n’importe qui de publier du contenu accessible mondialement.
+                    Au fil des années, de nouveaux usages sont apparus. Le Web n’est plus seulement un ensemble de pages informatives.
+                </p>
+                <ul>
+                    Il est devenu :
+                    <li>Un moyen de communication (réseaux sociaux, messageries, visioconférences)</li>
+                    <li>Une plateforme commerciale (boutiques en ligne, paiements, abonnements)</li>
+                    <li>Un outil de travail (cloud, suites bureautiques en ligne)</li>
+                    <li>Un espace de divertissement (streaming, jeux, médias)</li>
+                </ul>
+                <p>
+                    Cette évolution s’explique par les progrès technologiques, mais aussi par les besoins croissants des utilisateurs. Le Web s’est adapté pour proposer des interfaces plus intuitives, des performances accrues et des fonctionnalités toujours plus avancées.
+                    Aujourd’hui, le Web joue un rôle central dans presque tous les domaines de la société. L’administration, l’éducation, la santé, les transports et les entreprises dépendent largement des services en ligne. Cette dépendance renforce l’importance du Web comme infrastructure critique.
+                </p> 
+            </section>
+            <section>
+                <h2>A quoi sert de sécuriser internet ?</h2>
+                <p>
+                    À mesure que le Web s’est développé, la quantité de données échangées a fortement augmenté. De nombreuses informations sensibles transitent quotidiennement sur les réseaux : identités, mots de passe, messages privés, données bancaires, dossiers médicaux, informations professionnelles, etc.
+                    Si ces données ne sont pas protégées, elles peuvent être interceptées, modifiées ou volées. Les conséquences peuvent être graves, tant pour les individus que pour les organisations. Une fuite de données peut entraîner des pertes financières, une atteinte à la vie privée, une perte de confiance des utilisateurs et parfois des sanctions légales.
+                </p>
+                <ul>
+                    La sécurité du Web vise donc à protéger plusieurs éléments essentiels :
+                    <li>Les données des utilisateurs</li>
+                    <li>Les comptes et identités numériques</li>
+                    <li>Le bon fonctionnement des services</li>
+                    <li>La réputation des sites et entreprises</li>
+                </ul>
+                <p>
+                    Un site web non sécurisé constitue une cible facile pour les attaquants. Ceux-ci peuvent chercher à voler des informations, à perturber un service ou à exploiter les ressources du serveur à des fins malveillantes.
+                    La sécurité permet également d’assurer l’intégrité des contenus. Sans protection, un attaquant pourrait modifier les pages d’un site, afficher de fausses informations ou injecter du code malveillant. Cela peut avoir des conséquences graves, notamment si le site est utilisé dans un contexte sensible comme la santé ou l’administration.
+                    Un autre aspect important est la confiance. Les utilisateurs doivent avoir l’assurance que le site qu’ils consultent est fiable. Des indicateurs comme le cadenas HTTPS dans la barre d’adresse jouent un rôle psychologique important. Ils montrent que la communication est chiffrée et que le site respecte un minimum de bonnes pratiques.
+                    Il faut également comprendre que la sécurité n’est pas un état définitif, mais un processus continu. De nouvelles vulnérabilités apparaissent régulièrement, et les techniques d’attaque évoluent sans cesse. C’est pourquoi les développeurs doivent intégrer la sécurité dès la conception d’un site et maintenir leurs systèmes à jour.
+                    Enfin, sécuriser le Web, c’est aussi protéger l’écosystème dans son ensemble. Un site compromis peut servir de point de départ pour attaquer d’autres services, diffuser des logiciels malveillants ou héberger des contenus illégaux. La sécurité individuelle contribue donc à la sécurité collective.
+                </p>
+            </section>
+    </main>
+    <footer>
+        <p>2025 - 2026</p>
+        <p>Université de Cergy-Ponstoise</p>
+    </footer>
+</body>
+</html>

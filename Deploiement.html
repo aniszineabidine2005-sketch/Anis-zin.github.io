@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploiement & Configuration</title>
+    <link href="CSS/StyleGenerale.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="Images/CY_Cergy_Paris_Universite_-_Logo.png" alt="Logo CY" class="logo">
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="ConceptsModeles.html">Concepts & Modeles</a>
+            <a href="SecuriteNavigateur.html">Sécurité du navigateur</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Déploiement d’une application web sécurisée</h1>
+        <section>
+            <h2>Qu’est-ce que le déploiement</h2>
+            <p>
+                Le déploiement correspond à l’ensemble des actions permettant de rendre un site ou une application web accessible aux utilisateurs via Internet. Concrètement, cela signifie transférer les fichiers de l’application sur un serveur et configurer ce serveur pour qu’il puisse répondre aux requêtes des visiteurs.
+                Avant le déploiement, une application est généralement développée sur l’ordinateur du développeur ou dans un environnement local. À ce stade, le site n’est accessible que par le développeur lui-même. Le déploiement marque donc le passage entre un projet local et un service disponible publiquement.
+                Cette étape est importante, car elle transforme une application de test en un système réel, exposé à des utilisateurs et potentiellement à des attaquants. Une application mal configurée au moment du déploiement peut présenter des failles même si son code est correct.
+                Le déploiement ne consiste pas uniquement à copier des fichiers. Il inclut aussi la configuration du serveur web, la mise en place d’une base de données, la gestion des accès et parfois l’installation de dépendances nécessaires au fonctionnement de l’application.
+            </p>
+            <ul>
+                On distingue souvent plusieurs environnements :
+                <li>Environnement de développement</li>
+                <li>Environnement de test</li>
+                <li>Environnement de production</li>
+            </ul>
+            <p>
+                L’environnement de production est celui accessible au public. Il doit être configuré avec plus de précautions que les autres.
+                Ainsi, le déploiement représente une phase clé du cycle de vie d’un projet web, car il conditionne la stabilité, les performances et la sécurité du site.
+            </p>
+        </section>
+        <section>
+            <h2>Bonnes pratiques de base</h2>
+            <p>
+                Lors de la mise en ligne d’une application web, certaines bonnes pratiques simples permettent de réduire considérablement les risques.
+                Tout d’abord, l’utilisation du protocole HTTPS est indispensable. Il permet de chiffrer les échanges entre le navigateur et le serveur, empêchant l’interception des données sensibles.
+                Il est également important de ne pas exposer d’informations sensibles dans les fichiers accessibles publiquement. Par exemple, les identifiants de base de données ou les clés secrètes ne doivent jamais être visibles dans le code source envoyé au navigateur.
+                Les permissions des fichiers doivent être configurées correctement. Les fichiers critiques ne doivent pas être modifiables par n’importe quel utilisateur du système.
+                La séparation entre environnement de développement et environnement de production est aussi essentielle. Les messages d’erreur détaillés utiles en développement doivent être désactivés en production, car ils pourraient fournir des informations à un attaquant.
+                De plus, seuls les services nécessaires doivent être activés sur le serveur. Chaque service supplémentaire augmente la surface d’attaque.
+                Enfin, il est recommandé d’utiliser des mots de passe forts pour les comptes administrateurs et d’éviter l’utilisation de comptes par défaut.
+                Ces bonnes pratiques ne garantissent pas une sécurité parfaite, mais elles constituent une base solide.
+            </p>
+        </section>
+        <section>
+            <h2>Maintenance et mises à jour</h2>
+            <p>
+                La sécurité ne s’arrête pas une fois l’application mise en ligne. Un site doit être entretenu régulièrement afin de rester fiable et sûr.
+                Les mises à jour jouent un rôle essentiel. Les systèmes d’exploitation, serveurs web, bibliothèques et frameworks publient régulièrement des correctifs pour corriger des vulnérabilités. Ne pas appliquer ces mises à jour expose l’application à des failles connues.
+                La sauvegarde des données est également cruciale. En cas de panne, d’erreur humaine ou d’attaque, les sauvegardes permettent de restaurer le service.
+                La surveillance du site permet de détecter rapidement les comportements anormaux : augmentation soudaine du trafic, erreurs répétées, tentatives de connexion suspectes.
+                Il est aussi utile de conserver des journaux (logs) des actions importantes. Ces journaux facilitent l’analyse en cas de problème et aident à comprendre ce qui s’est produit.
+                Enfin, il est recommandé de tester régulièrement l’application, même après sa mise en ligne, afin de vérifier que les fonctionnalités continuent de fonctionner correctement et que de nouvelles failles n’ont pas été introduites.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <p>2025 - 2026</p>
+            <p>Université de Cergy-Ponstoise</p>
+        </div>
+    </footer>
+</body>
+</html>
